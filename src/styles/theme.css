@@ -1,0 +1,15 @@
+.dark {
+  --bg-primary: #0f172a;
+  --text-color: #fff;
+
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+}
+
+.light {
+  --bg-primary: #e2e8f0;
+  --text-color: #333;
+
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+}

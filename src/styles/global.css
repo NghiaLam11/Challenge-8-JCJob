@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  width: 1245px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--text-color);
+}
