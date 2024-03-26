@@ -1,15 +1,20 @@
 .dark {
-  --bg-primary: #0f172a;
+  --bg-color: #0f172a;
+  --primary-color: #4ade80;
   --text-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.4);
 
-  background-color: var(--bg-primary);
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
 .light {
-  --bg-primary: #e2e8f0;
+  --bg-color: #e2e8f0;
+  --shadow-color: rgba(71, 71, 71, 0.4);
   --text-color: #333;
+  --primary-color: #0ea5e9;
 
-  background-color: var(--bg-primary);
+
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
