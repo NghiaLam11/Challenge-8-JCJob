@@ -1,33 +1,14 @@
 <template>
-  <div class="signup">
-    <div class="container signup-container">
+  <div class="signin">
+    <div class="container signin-container">
       <div class="content">
         <div class="left">
           <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
-          <Carousel>
-            <Slide
-              v-for="(mode, index) in modes"
-              :snapAlign="'center'"
-              :key="index"
-            >
-              <div class="carousel__item">
-                <img :src="mode.url" alt="" />
-                <p>{{ mode.name }}</p>
-              </div>
-            </Slide>
-
-            <template #addons>
-              <Navigation />
-            </template>
-          </Carousel>
+          <img src="../images/briefcase.png" alt="briefcase" />
         </div>
         <div class="right">
-          <h3>Sign up</h3>
-          <form class="signup-form">
-            <div class="form-group">
-              <label for="name">FULL NAME</label>
-              <input placeholder="Name..." type="text" name="name" id="name" />
-            </div>
+          <h3>Sign in</h3>
+          <form class="signin-form">
             <div class="form-group">
               <label for="email">EMAIL</label>
               <input
@@ -50,8 +31,8 @@
               </div>
             </div>
             <div class="form-btn">
-              <button>Sign up</button>
-              <router-link to="/signin">I'm already member</router-link>
+              <button>Sign in</button>
+              <router-link to="/signup">I'm a new member</router-link>
             </div>
           </form>
         </div>
@@ -60,27 +41,18 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from "vue";
-import { Carousel, Navigation, Slide } from "vue3-carousel";
-
-import "vue3-carousel/dist/carousel.css";
-const modes = ref([
-  { url: "/src/images/signup.png", name: "Worker" },
-  { url: "/src/images/signin.png", name: "Interviewer" },
-]);
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
-.signup {
+.signin {
   height: 100vh;
 }
-.signup .signup-container {
+.signin .signin-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.signup .signup-container .content {
+.signin .signin-container .content {
   display: flex;
   align-items: center;
   padding: 2rem 3rem;
@@ -186,7 +158,7 @@ form .form-btn a:hover {
   color: var(--primary-color);
 }
 @media screen and (min-width: 668px) and (max-width: 992px) {
-  .signup .signup-container .content {
+  .signin .signin-container .content {
     flex-direction: column;
   }
   .right,
@@ -198,7 +170,7 @@ form .form-btn a:hover {
   }
 }
 @media screen and (max-width: 668px) {
-  .signup .signup-container .content {
+  .signin .signin-container .content {
     flex-direction: column;
     box-shadow: none;
     padding: 1rem;
