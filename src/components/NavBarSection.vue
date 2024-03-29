@@ -14,7 +14,13 @@
         </li>
       </ul>
       <div class="nav-theme">
-        <img src="../images/full-moon (1).png" alt="" />
+        <img
+          v-if="theme === 'dark'"
+          @click="onLightMode"
+          src="../images/full-moon (1).png"
+          alt=""
+        />
+        <img v-else @click="onDarkMode" src="../images/sun.png" alt="" />
       </div>
     </div>
     <div class="nav-mobile">
@@ -75,7 +81,13 @@
           <router-link to="/">Sign out</router-link>
         </li>
         <li class="nav-theme">
-          <img src="../images/full-moon (1).png" alt="" />
+          <img
+            v-if="theme === 'dark'"
+            @click="onLightMode"
+            src="../images/full-moon (1).png"
+            alt=""
+          />
+          <img v-else @click="onDarkMode" src="../images/sun.png" alt="" />
         </li>
       </ul>
       <i @click="onClose" class="fas fa-times close"></i>
@@ -93,31 +105,59 @@ const onToggleNavMobileHidden = () => {
 const onClose = () => {
   navMobileHidden.value.style.display = "none";
 };
+const themeLocalStorage = localStorage.getItem("theme");
+const theme = ref(themeLocalStorage !== null ? themeLocalStorage : "light");
+const onDarkMode = () => {
+  const html: any = document.querySelector("html");
+  html.classList.remove("light");
+  html.classList.add("dark");
+  theme.value = "dark";
+  localStorage.removeItem("theme");
+  localStorage.setItem("theme", "dark");
+};
+
+const onLightMode = () => {
+  const html: any = document.querySelector("html");
+  html.classList.remove("dark");
+  html.classList.add("light");
+  theme.value = "light";
+  localStorage.removeItem("theme");
+  localStorage.setItem("theme", "light");
+};
 </script>
 
 <style scoped>
 .nav-layout {
   display: flex;
   align-items: center;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 .nav-logo {
   width: 20%;
-
-  text-align: center;
 }
 .nav-logo h2 {
-  scale: 2;
+  /* scale: 2; */
+  font-size: 3rem;
   letter-spacing: 0.6px;
   font-family: monospace;
   font-weight: bold;
 }
 .nav-theme {
   width: 10%;
+  cursor: pointer;
 }
 .nav-theme img {
   width: 33px;
   margin: 0 auto;
+  animation: toggleTheme 1.5s forwards cubic-bezier(0.075, 0.82, 0.165, 1.5);
+}
+@keyframes toggleTheme {
+  0% {
+    transform: translateX(200px) translateY(-100px) rotate(-360deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
 }
 .nav-list {
   margin-left: auto;
@@ -158,6 +198,7 @@ const onClose = () => {
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 100;
     justify-content: center;
     align-items: center;
   }
@@ -171,8 +212,23 @@ const onClose = () => {
   .nav-mobile-hidden .nav-list li {
     padding: 1rem;
   }
+  .nav-mobile-hidden .nav-list li:hover {
+    box-shadow: 0 1px 0 0 var(--primary-color);
+  }
+  .nav-mobile-hidden .nav-list li a:hover {
+    box-shadow: none;
+  }
   .nav-mobile-hidden .nav-list .nav-theme {
     width: 300px;
+    animation: toggleTheme 1.5s forwards cubic-bezier(0.075, 0.82, 0.165, 1.5);
+  }
+  @keyframes toggleTheme {
+    0% {
+      transform: translateX(-200px) translateY(-100px) rotate(-360deg);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
   }
   .close {
     position: absolute;
