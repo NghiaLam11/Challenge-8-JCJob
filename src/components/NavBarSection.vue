@@ -1,0 +1,220 @@
+<template>
+  <div class="navbar container">
+    <div class="nav-layout">
+      <div class="nav-logo">
+        <h2>JCJob</h2>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item"><router-link to="/">Home</router-link></li>
+        <li class="nav-item"><router-link to="/">Jobs</router-link></li>
+        <li class="nav-item"><router-link to="/">Workers</router-link></li>
+        <li class="nav-item"><router-link to="/">Network</router-link></li>
+        <li class="nav-item">
+          <router-link to="/">Notifications</router-link>
+        </li>
+      </ul>
+      <div class="nav-theme">
+        <img src="../images/full-moon (1).png" alt="" />
+      </div>
+    </div>
+    <div class="nav-mobile">
+      <div class="nav-top">
+        <i @click="onToggleNavMobileHidden" class="fas fa-bars"></i>
+        <div class="nav-logo">
+          <h2>JCJob</h2>
+        </div>
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="sidebar">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <router-link to="/"
+              ><span class="icon">&#9978;</span
+              ><span class="text">Home</span></router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link to="/"
+              ><span class="icon">&#128188;</span
+              ><span class="text">Jobs</span></router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link to="/"
+              ><span class="icon">&#129466;</span
+              ><span class="text">Workers</span></router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link to="/"
+              ><span class="icon">&#127759;</span
+              ><span class="text">Network</span></router-link
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-mobile-hidden" ref="navMobileHidden">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <router-link to="/">Home</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/">Feed</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/">Community</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/">Notifications</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/">Settings</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/">Sign out</router-link>
+        </li>
+        <li class="nav-theme">
+          <img src="../images/full-moon (1).png" alt="" />
+        </li>
+      </ul>
+      <i @click="onClose" class="fas fa-times close"></i>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+const navMobileHidden = ref();
+const onToggleNavMobileHidden = () => {
+  navMobileHidden.value.style.display = "flex";
+  console.log("BLCOK");
+};
+const onClose = () => {
+  navMobileHidden.value.style.display = "none";
+};
+</script>
+
+<style scoped>
+.nav-layout {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+.nav-logo {
+  width: 20%;
+
+  text-align: center;
+}
+.nav-logo h2 {
+  scale: 2;
+  letter-spacing: 0.6px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.nav-theme {
+  width: 10%;
+}
+.nav-theme img {
+  width: 33px;
+  margin: 0 auto;
+}
+.nav-list {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.nav-list li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-list li a {
+  padding: 2rem;
+  padding-top: 4rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+
+  text-decoration: none;
+}
+.nav-list li a:hover {
+  box-shadow: 0 2px 0 0 var(--primary-color);
+}
+.nav-mobile,
+.nav-mobile-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 738px) {
+  .nav-layout {
+    display: none;
+  }
+  .nav-mobile-hidden {
+    display: none;
+    /* display: flex; */
+    background-color: var(--bgs-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-mobile-hidden .nav-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .nav-mobile-hidden .nav-list li {
+    padding: 1rem;
+  }
+  .nav-mobile-hidden .nav-list .nav-theme {
+    width: 300px;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  .nav-mobile .nav-top {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 0 0 var(--primary-color);
+    width: 100%;
+  }
+  .nav-mobile .nav-top i,
+  .nav-logo {
+    padding: 2rem;
+  }
+  .nav-mobile .nav-top i {
+    font-size: 1.6rem;
+  }
+  .nav-mobile .nav-top .nav-logo {
+    width: 30%;
+  }
+  .sidebar .nav-list {
+    justify-content: center;
+    /* box-shadow: 0 1px 0 0 var(--shadow-color); */
+
+    margin-left: 0;
+    padding: 1rem 0;
+  }
+  .sidebar .nav-list li {
+    border-left: 0.5px solid var(--shadow-color);
+    border-right: 0.5px solid var(--shadow-color);
+    text-align: center;
+    display: flex;
+  }
+  .sidebar .nav-list li a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+</style>
