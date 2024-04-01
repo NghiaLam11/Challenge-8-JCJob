@@ -32,7 +32,7 @@
         <div class="nav-logo">
           <h2>JCJob</h2>
         </div>
-        <i class="fas fa-search"></i>
+        <i class="fas fa-search" @click="onOpenSearch"></i>
       </div>
       <div class="sidebar">
         <ul class="nav-list">
