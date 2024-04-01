@@ -2,6 +2,7 @@
 // import GreetSection from "./components/GreetSection.vue";
 import NavBarSection from "./components/NavBarSection.vue";
 import SideBarSection from "./components/SideBarSection.vue";
+import ChatSection from "./components/ChatSection.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import SideBarSection from "./components/SideBarSection.vue";
       <div class="view">
         <router-view></router-view>
       </div>
+      <ChatSection class="chat" />
     </div>
 
     <!-- <GreetSection /> -->
@@ -30,12 +32,36 @@ import SideBarSection from "./components/SideBarSection.vue";
   width: 25%;
 }
 .view {
-  width: 75%;
+  width: 45%;
+  max-height: calc(100vh - 94px);
+  overflow-y: scroll;
+  border-right: 1px solid var(--shadow-color);
+  border-left: 1px solid var(--shadow-color);
 }
-@media screen and (max-width: 738px) {
+.view::-webkit-scrollbar {
+  display: none;
+}
+.chat {
+  width: 25%;
+}
+@media screen and (max-width: 998px) {
+  .chat {
+    display: none;
+  }
+  .sidebar {
+    width: 40%;
+  }
   .view {
     width: 100%;
+    padding: 1rem;
   }
+}
+@media screen and (max-width: 738px) {
+  .app-layout {
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
   .content-layout {
     padding-top: 0rem;
   }

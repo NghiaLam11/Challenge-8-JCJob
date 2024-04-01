@@ -91,7 +91,7 @@
 .sidebar .nav-list .nav-auth:hover a h5 {
   text-shadow: 0 0 10px var(--primary-color);
 }
-@media screen and (max-width: 738px) {
+@media screen and (max-width: 576px) {
   .sidebar {
     display: none;
   }

@@ -181,10 +181,10 @@ const onOpenSearch = () => {
 }
 @keyframes toggleTheme {
   0% {
-    transform: translateX(200px) translateY(-100px) rotate(-360deg);
+    transform: translateY(-100px) rotate(-360deg);
   }
   100% {
-    transform: translateX(0) translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
   }
 }
 .nav-list {

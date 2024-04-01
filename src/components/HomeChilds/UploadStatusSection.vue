@@ -44,6 +44,8 @@ form {
   width: calc(100% - 45px);
 }
 input {
+  background-color: var(--bgs-color);
+  cursor: pointer;
   width: 100%;
   font-size: 1.5rem;
   padding: 0.8rem 0rem;
@@ -56,7 +58,6 @@ input {
   /* border-left: 4px solid var(--border-color); */
   /* border-left: none; */
   outline: none;
-  background-color: transparent;
   text-align: left;
 }
 @media screen and (max-width: 738px) {
