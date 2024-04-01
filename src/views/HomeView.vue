@@ -1,3 +1,9 @@
 <template>
-    <h1>HOME VIEW</h1>
+  <div class="home-section">
+    <HomeSection />
+  </div>
 </template>
+
+<script setup lang="ts">
+import HomeSection from "../components/HomeSection.vue";
+</script>

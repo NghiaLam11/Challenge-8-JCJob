@@ -12,6 +12,9 @@
         <li class="nav-item">
           <router-link to="/">Notifications</router-link>
         </li>
+        <li class="nav-item">
+          <i @click="onOpenSearch" class="fas fa-search"></i>
+        </li>
       </ul>
       <div class="nav-theme">
         <img
@@ -96,7 +99,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 const navMobileHidden = ref();
 const onToggleNavMobileHidden = () => {
   navMobileHidden.value.style.display = "flex";
@@ -105,8 +108,18 @@ const onToggleNavMobileHidden = () => {
 const onClose = () => {
   navMobileHidden.value.style.display = "none";
 };
+
 const themeLocalStorage = localStorage.getItem("theme");
 const theme = ref(themeLocalStorage !== null ? themeLocalStorage : "light");
+onMounted(() => {
+  const html: any = document.querySelector("html");
+  if (themeLocalStorage !== null) {
+    html.classList.add(themeLocalStorage);
+  } else {
+    html.classList.add("light");
+  }
+});
+
 const onDarkMode = () => {
   const html: any = document.querySelector("html");
   html.classList.remove("light");
@@ -123,6 +136,17 @@ const onLightMode = () => {
   theme.value = "light";
   localStorage.removeItem("theme");
   localStorage.setItem("theme", "light");
+};
+const isOpenSearch = ref(false);
+const onOpenSearch = () => {
+  const searchElement: any = document.querySelector(".search");
+  if (isOpenSearch.value === true) {
+    searchElement.style.display = "none";
+    isOpenSearch.value = false;
+  } else {
+    searchElement.style.display = "block";
+    isOpenSearch.value = true;
+  }
 };
 </script>
 
@@ -141,6 +165,10 @@ const onLightMode = () => {
   letter-spacing: 0.6px;
   font-family: monospace;
   font-weight: bold;
+  background: linear-gradient(to right, #4ade80, #0ea5e9 50%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .nav-theme {
   width: 10%;
@@ -176,6 +204,10 @@ const onLightMode = () => {
   background-color: transparent;
 
   text-decoration: none;
+}
+.nav-item i {
+  font-size: 1.4rem;
+  padding: 2rem;
 }
 .nav-list li a:hover {
   box-shadow: 0 2px 0 0 var(--primary-color);
@@ -245,8 +277,13 @@ const onLightMode = () => {
     box-shadow: 0 1px 0 0 var(--primary-color);
     width: 100%;
   }
-  .nav-mobile .nav-top i,
   .nav-logo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-mobile .nav-top i {
     padding: 2rem;
   }
   .nav-mobile .nav-top i {

@@ -4,7 +4,7 @@
   --text-color: #fff;
   --shadow-color: rgba(0, 0, 0, 0.4);
   --bgs-color: #020617;
-
+  --border-color: #9ca3af;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -15,7 +15,7 @@
   --text-color: #333;
   --primary-color: #0ea5e9;
   --bgs-color: #9ca3af;
-
+  --border-color: #020617;
 
   background-color: var(--bg-color);
   color: var(--text-color);

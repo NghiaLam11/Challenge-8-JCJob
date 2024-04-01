@@ -29,4 +29,15 @@ import SideBarSection from "./components/SideBarSection.vue";
 .sidebar {
   width: 25%;
 }
+.view {
+  width: 75%;
+}
+@media screen and (max-width: 738px) {
+  .view {
+    width: 100%;
+  }
+  .content-layout {
+    padding-top: 0rem;
+  }
+}
 </style>
