@@ -91,6 +91,14 @@
 .sidebar .nav-list .nav-auth:hover a h5 {
   text-shadow: 0 0 10px var(--primary-color);
 }
+@media screen and (max-width: 738px) {
+  .sidebar .nav-list .nav-auth {
+    padding-right: 0;
+  }
+  .sidebar .nav-list .nav-auth a .name {
+    font-size: 1.2rem;
+  }
+}
 @media screen and (max-width: 576px) {
   .sidebar {
     display: none;

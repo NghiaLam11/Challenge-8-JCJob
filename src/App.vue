@@ -13,7 +13,7 @@ import ChatSection from "./components/ChatSection.vue";
       <div class="view">
         <router-view></router-view>
       </div>
-      <ChatSection class="chat" />
+      <ChatSection class="chat-section" />
     </div>
 
     <!-- <GreetSection /> -->
@@ -30,23 +30,22 @@ import ChatSection from "./components/ChatSection.vue";
 }
 .sidebar {
   width: 25%;
+  border-right: 1px solid var(--shadow-color);
 }
 .view {
   width: 45%;
   max-height: calc(100vh - 94px);
   overflow-y: scroll;
-  border-right: 1px solid var(--shadow-color);
-  border-left: 1px solid var(--shadow-color);
 }
 .view::-webkit-scrollbar {
   display: none;
 }
-.chat {
-  width: 25%;
+.chat-section {
+  width: 30%;
 }
 @media screen and (max-width: 998px) {
-  .chat {
-    display: none;
+  .chat-section {
+    width: 0%;
   }
   .sidebar {
     width: 40%;
