@@ -6,11 +6,11 @@
       </div>
       <ul class="nav-list">
         <li class="nav-item"><router-link to="/">Home</router-link></li>
-        <li class="nav-item"><router-link to="/">Jobs</router-link></li>
-        <li class="nav-item"><router-link to="/">Workers</router-link></li>
-        <li class="nav-item"><router-link to="/">Network</router-link></li>
+        <li class="nav-item"><router-link to="/jobs">Jobs</router-link></li>
+        <li class="nav-item"><router-link to="/workers">Workers</router-link></li>
+        <li class="nav-item"><router-link to="/network">Network</router-link></li>
         <li class="nav-item">
-          <router-link to="/">Notifications</router-link>
+          <router-link to="/notifications">Notifications</router-link>
         </li>
         <li class="nav-item">
           <i @click="onOpenSearch" class="fas fa-search"></i>
@@ -43,19 +43,19 @@
             >
           </li>
           <li class="nav-item">
-            <router-link to="/"
+            <router-link to="/jobs"
               ><span class="icon">&#128188;</span
               ><span class="text">Jobs</span></router-link
             >
           </li>
           <li class="nav-item">
-            <router-link to="/"
+            <router-link to="/workers"
               ><span class="icon">&#129466;</span
               ><span class="text">Workers</span></router-link
             >
           </li>
           <li class="nav-item">
-            <router-link to="/"
+            <router-link to="/network"
               ><span class="icon">&#127759;</span
               ><span class="text">Network</span></router-link
             >
@@ -69,16 +69,16 @@
           <router-link to="/">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/">Feed</router-link>
+          <router-link to="/feed">Feed</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/">Community</router-link>
+          <router-link to="/community">Community</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/">Notifications</router-link>
+          <router-link to="/notifications">Notifications</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/">Settings</router-link>
+          <router-link to="/settings">Settings</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/">Sign out</router-link>

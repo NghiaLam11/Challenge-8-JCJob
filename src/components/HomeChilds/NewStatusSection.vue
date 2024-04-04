@@ -1,7 +1,7 @@
 <template>
   <div class="new">
     <div class="new-list">
-      <div class="new-item">
+      <div class="new-item" v-for="n in 2" :key="n">
         <div class="item-top">
           <span class="status">Find Worker</span>
           <div class="author">
@@ -47,10 +47,15 @@
 .new {
   padding: 1.5rem 2.5rem;
 }
+.new .new-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 .new .new-list .new-item {
   border-radius: 4px;
   padding: 1rem;
   border: 1px solid var(--shadow-color);
+  margin-bottom: 2rem;
 }
 
 .new .new-list .new-item .item-top .author img {

@@ -33,15 +33,16 @@ import ChatSection from "./components/ChatSection.vue";
   border-right: 1px solid var(--shadow-color);
 }
 .view {
-  width: 45%;
+  width: 50%;
   max-height: calc(100vh - 94px);
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .view::-webkit-scrollbar {
   display: none;
 }
 .chat-section {
-  width: 30%;
+  width: 25%;
 }
 @media screen and (max-width: 998px) {
   .chat-section {

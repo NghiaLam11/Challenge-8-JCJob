@@ -14,16 +14,16 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/">Feeds</router-link>
+        <router-link to="/feeds">Feeds</router-link>
       </li>
       <li>
-        <router-link to="/">Community</router-link>
+        <router-link to="/community">Community</router-link>
       </li>
       <li>
-        <router-link to="/">Settings</router-link>
+        <router-link to="/settings">Settings</router-link>
       </li>
       <li class="signout">
-        <p to="/"><i class="fas fa-sign-out-alt"></i> Sign out</p>
+        <p><i class="fas fa-sign-out-alt"></i> Sign out</p>
       </li>
     </div>
   </div>
