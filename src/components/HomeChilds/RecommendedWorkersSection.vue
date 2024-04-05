@@ -1,12 +1,12 @@
 <template>
-  <div class="recruiters">
-    <h3>Recommended recruiters</h3>
+  <div class="workers">
+    <h3>Recommended workers</h3>
     <Carousel :breakpoints="breakpoints">
       <Slide v-for="n in 10" :key="n">
-        <div class="carousel__item recruiters-item">
+        <div class="carousel__item workers-item">
           <img
             src="/src/images/goku-ultra-instinct-dragon-ball-thumb-1500x844.jpg"
-            alt="recruiters avatar"
+            alt="workers avatar"
           />
           <h4>Lam Hien Nghia</h4>
           <button>Follow</button>
@@ -29,52 +29,52 @@ const breakpoints = {
   0: {
     itemsToShow: 2,
     snapAlign: "start",
-    autoplay: 3000,
+    autoplay: 2000,
     wrapAround: true,
   },
   738: {
     itemsToShow: 3,
     snapAlign: "center",
-    autoplay: 3000,
+    autoplay: 6000,
     wrapAround: true,
   },
 };
 </script>
 
 <style scoped>
-.recruiters {
+.workers {
   padding: 2rem;
 }
-.recruiters-item {
+.workers-item {
   text-align: center;
   border: 1px solid var(--shadow-color);
   width: 100%;
   margin: 0.5rem;
   padding: 1rem 0.5rem;
 }
-.recruiters-item img {
+.workers-item img {
   width: 50px;
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
   margin: 0 auto;
 }
-.recruiters-item h4 {
+.workers-item h4 {
   padding: 0.3rem 0;
 }
-.recruiters-item button {
+.workers-item button {
   cursor: pointer;
   border: 1px solid var(--text-color);
   color: var(--text-color);
   background-color: transparent;
   border-radius: 3px;
 }
-.recruiters-item button:hover {
+.workers-item button:hover {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
 @media screen and (max-width: 576px) {
-  .recruiters {
+  .workers {
     padding: 1rem 0;
   }
 }

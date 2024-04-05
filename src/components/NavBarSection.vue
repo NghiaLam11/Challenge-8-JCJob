@@ -1,14 +1,18 @@
 <template>
   <div class="navbar container">
-    <div class="nav-layout">
+    <div class="nav-computer">
       <div class="nav-logo">
         <h2>JCJob</h2>
       </div>
       <ul class="nav-list">
         <li class="nav-item"><router-link to="/">Home</router-link></li>
         <li class="nav-item"><router-link to="/jobs">Jobs</router-link></li>
-        <li class="nav-item"><router-link to="/workers">Workers</router-link></li>
-        <li class="nav-item"><router-link to="/network">Network</router-link></li>
+        <li class="nav-item">
+          <router-link to="/workers">Workers</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/network">Network</router-link>
+        </li>
         <li class="nav-item">
           <router-link to="/notifications">Notifications</router-link>
         </li>
@@ -148,10 +152,11 @@ const onOpenSearch = () => {
     isOpenSearch.value = true;
   }
 };
+
 </script>
 
 <style scoped>
-.nav-layout {
+.nav-computer {
   display: flex;
   align-items: center;
   padding: 2rem 0;
@@ -218,7 +223,7 @@ const onOpenSearch = () => {
 }
 
 @media screen and (max-width: 738px) {
-  .nav-layout {
+  .nav-computer {
     display: none;
   }
   .nav-mobile-hidden {

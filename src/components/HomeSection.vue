@@ -5,6 +5,7 @@
     <NewStatusSection />
     <SponsoredStatusSection />
     <RecommendedRecruitersSection />
+    <RecommendedWorkersSection />
     <RandomStatusSection />
   </div>
 </template>
@@ -16,4 +17,5 @@ import SponsoredStatusSection from "./HomeChilds/SponsoredStatusSection.vue";
 import RandomStatusSection from "./HomeChilds/RandomStatusSection.vue";
 import UploadStatusSection from "./HomeChilds/UploadStatusSection.vue";
 import RecommendedRecruitersSection from "./HomeChilds/RecommendedRecruitersSection.vue";
+import RecommendedWorkersSection from "./HomeChilds/RecommendedWorkersSection.vue";
 </script>

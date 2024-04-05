@@ -46,9 +46,6 @@ const onToggleChats = () => {
 </script>
 
 <style scoped>
-.chat {
-  border-left: 1px solid var(--shadow-color);
-}
 .chat h3 {
   padding: 0 2rem;
   font-size: 1.5rem;
@@ -56,6 +53,9 @@ const onToggleChats = () => {
   padding: 0.5rem 2rem;
 
   border-bottom: 1px solid var(--shadow-color);
+}
+.chat .chat-list {
+  min-height: 100%;
 }
 .chat .chat-list .chat-item {
   display: flex;
@@ -69,9 +69,9 @@ const onToggleChats = () => {
   padding-left: 0.5rem;
 }
 .chat .chat-list h5 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: underline;
-  line-height: 2rem;
+  line-height: 1.6rem;
   transition: all 0.1s linear;
 }
 .chat .chat-list img {
@@ -90,7 +90,6 @@ const onToggleChats = () => {
   display: none;
 }
 .chat .chat-list .chat-item:hover img {
-  transform: rotate(360deg);
   filter: grayscale(0);
 }
 .chat .chat-list .chat-item:hover h5 {
@@ -164,7 +163,6 @@ const onToggleChats = () => {
   display: none;
 }
 .chat-mobile .chat-list .chat-item:hover img {
-  transform: rotate(360deg);
   filter: grayscale(0);
 }
 .chat-mobile .chat-list .chat-item:hover h5 {

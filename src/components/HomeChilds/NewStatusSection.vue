@@ -20,10 +20,12 @@
           <span class="job">Builder</span><span class="salary">20$/hour</span
           ><span class="time">1PM - 5PM</span>
         </div>
-        <div class="text">
+        <div class="text multiline-ellipsis-2" @click="onReadMore($event)">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia itaque
           ipsa iste culpa tempora facere repudiandae fugit, reiciendis quam
           illum! In sed praesentium consectetur vitae ex harum velit ad
+          suscipit! ipsa iste culpa tempora facere repudiandae fugit, reiciendis
+          quam illum! In sed praesentium consectetur vitae ex harum velit ad
           suscipit!
         </div>
         <div class="thumbnail">
@@ -42,7 +44,15 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const onReadMore = (e: any) => {
+  if (e.target.className.includes("2")) {
+    e.target.className = e.target.className.replace("2", "4");
+  } else if (e.target.className.includes("4")) {
+    e.target.className = e.target.className.replace("4", "2");
+  }
+};
+</script>
 <style scoped>
 .new {
   padding: 1.5rem 2.5rem;
@@ -94,7 +104,7 @@
   letter-spacing: 0.2px;
 }
 .new .new-list .new-item .text {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   line-height: 1.3rem;
   font-weight: 500;
 }

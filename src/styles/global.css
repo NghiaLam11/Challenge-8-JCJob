@@ -23,3 +23,44 @@ a {
 .router-link-active {
   color: var(--primary-color);
 }
+.carousel__icon {
+  color: var(--text-color);
+}
+.multiline-ellipsis-1 {
+  -webkit-line-clamp: 1; /* start showing ellipsis when 1rd line is reached */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}
+.multiline-ellipsis-2 {
+  -webkit-line-clamp: 2; /* start showing ellipsis when 2rd line is reached */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}
+
+.multiline-ellipsis-3 {
+  -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}
+
+.multiline-ellipsis-4 {
+  -webkit-line-clamp: 4; /* start showing ellipsis when 4rd line is reached */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}
+
+.multiline-ellipsis-5 {
+  -webkit-line-clamp: 5; /* start showing ellipsis when 5rd line is reached */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}

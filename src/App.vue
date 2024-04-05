@@ -3,6 +3,7 @@
 import NavBarSection from "./components/NavBarSection.vue";
 import SideBarSection from "./components/SideBarSection.vue";
 import ChatSection from "./components/ChatSection.vue";
+import FooterSection from "./components/FooterSection.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import ChatSection from "./components/ChatSection.vue";
       </div>
       <ChatSection class="chat-section" />
     </div>
+    <FooterSection />
 
     <!-- <GreetSection /> -->
   </div>
@@ -26,7 +28,7 @@ import ChatSection from "./components/ChatSection.vue";
 }
 .content-layout {
   display: flex;
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 .sidebar {
   width: 25%;
@@ -34,7 +36,7 @@ import ChatSection from "./components/ChatSection.vue";
 }
 .view {
   width: 50%;
-  max-height: calc(100vh - 94px);
+  height: calc(100vh - 94px);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -43,6 +45,7 @@ import ChatSection from "./components/ChatSection.vue";
 }
 .chat-section {
   width: 25%;
+  border-left: 1px solid var(--shadow-color);
 }
 @media screen and (max-width: 998px) {
   .chat-section {
