@@ -49,7 +49,8 @@ import FooterSection from "./components/FooterSection.vue";
 }
 @media screen and (max-width: 998px) {
   .chat-section {
-    width: 0%;
+    width: 0;
+    border-left: none;
   }
   .sidebar {
     width: 40%;
