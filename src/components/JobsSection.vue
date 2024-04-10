@@ -23,7 +23,7 @@
       <div class="jobs-item" v-for="n in 3" :key="n">
         <div class="item-top">
           <img
-            src="../images/goku-ultra-instinct-dragon-ball-thumb-1500x844.jpg"
+            src="../images/spiderman-ps4-spiderman-superheroes-games-wallpaper-preview.jpg"
             alt=""
           />
           <div class="auth">

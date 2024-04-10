@@ -5,7 +5,7 @@
     <div class="chat-list">
       <div class="chat-item">
         <img
-          src="../images/goku-ultra-instinct-dragon-ball-thumb-1500x844.jpg"
+          src="../images/spiderman-ps4-spiderman-superheroes-games-wallpaper-preview.jpg"
           alt="avatar"
         />
         <div class="infor">
