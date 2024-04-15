@@ -1,44 +1,45 @@
 <template>
   <div>
-   <div class="chat">
-    <h3>Chats</h3>
-    <div class="chat-list">
-      <div class="chat-item">
-        <img
-          src="../images/spiderman-ps4-spiderman-superheroes-games-wallpaper-preview.jpg"
-          alt="avatar"
-        />
-        <div class="infor">
-          <h5 class="name">Lam Hien Nghia</h5>
-          <p>Worker</p>
+    <div class="chat">
+      <h3>Chats</h3>
+      <div class="chat-list">
+        <div class="chat-item">
+          <img
+            src="../images/spiderman-ps4-spiderman-superheroes-games-wallpaper-preview.jpg"
+            alt="avatar"
+          />
+          <div class="infor">
+            <h5 class="name">Lam Hien Nghia</h5>
+            <p>Worker</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="chat-mobile" v-if="isOpenChat">
-    <h3>Chats</h3>
-    <div class="chat-list">
-      <div class="chat-item">
-        <img
-          src="../images/goku-ultra-instinct-dragon-ball-thumb-1500x844.jpg"
-          alt="avatar"
-        />
-        <div class="infor">
-          <h5 class="name">Lam Hien Nghia</h5>
-          <p>Worker</p>
+    <div class="chat-mobile" v-if="isOpenChat">
+      <h3>Chats</h3>
+      <div class="chat-list">
+        <div class="chat-item">
+          <img
+            src="../images/goku-ultra-instinct-dragon-ball-thumb-1500x844.jpg"
+            alt="avatar"
+          />
+          <div class="infor">
+            <h5 class="name">Lam Hien Nghia</h5>
+            <p>Worker</p>
+          </div>
         </div>
       </div>
     </div>
+    <div :class="[isOpenChat === true ? 'open' : '', 'chat-icon']">
+      <i @click="onToggleChats" class="fas fa-comment-dots"></i>
+    </div>
+    <ChatboxSection v-if="false"/>
   </div>
-  <div :class="[isOpenChat === true ? 'open' : '', 'chat-icon']">
-    <i @click="onToggleChats" class="fas fa-comment-dots"></i>
-  </div>   
-  </div>
-
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import ChatboxSection from "./ChatChilds/ChatboxSection.vue";
 const isOpenChat = ref(false);
 const onToggleChats = () => {
   isOpenChat.value = !isOpenChat.value;
