@@ -7,6 +7,7 @@ const routes = [
   { path: "/jobs", component: () => import("./views/JobsView.vue") },
   { path: "/workers", component: () => import("./views/WorkersView.vue") },
   { path: "/network", component: () => import("./views/NetworkView.vue") },
+  { path: "/notifications", component: () => import("./views/NotificationsView.vue") },
 ];
 
 const router = createRouter({
