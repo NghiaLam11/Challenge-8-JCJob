@@ -17,7 +17,7 @@
         <router-link to="/feeds">Feeds</router-link>
       </li>
       <li>
-        <router-link to="/community">Community</router-link>
+        <router-link to="/communities">Communities</router-link>
       </li>
       <li>
         <router-link to="/settings">Settings</router-link>

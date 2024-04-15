@@ -76,7 +76,7 @@
           <router-link to="/feed">Feed</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/community">Community</router-link>
+          <router-link to="/communities">Communities</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/notifications">Notifications</router-link>
