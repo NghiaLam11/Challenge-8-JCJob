@@ -1,5 +1,5 @@
 <template>
-  <div class="profileSetting-section">
+  <div class="profile-setting-section">
     <ProfileSettingSection />
   </div>
 </template>

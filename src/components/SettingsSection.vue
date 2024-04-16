@@ -2,7 +2,7 @@
   <div class="settings">
     <ul>
       <li><router-link to="/profile-setting">Profile</router-link></li>
-      <li><router-link to="/">Authencation</router-link></li>
+      <li><router-link to="/authentication">Authentication</router-link></li>
       <li><router-link to="/">Theme</router-link></li>
     </ul>
   </div>

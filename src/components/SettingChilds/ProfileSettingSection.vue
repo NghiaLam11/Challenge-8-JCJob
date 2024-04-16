@@ -106,4 +106,5 @@ textarea {
   border-color: var(--text-color);
   background-color: var(--shadow-color);
 }
+
 </style>

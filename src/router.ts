@@ -18,6 +18,10 @@ const routes = [
   { path: "/feeds", component: () => import("./views/FeedsView.vue") },
   { path: "/settings", component: () => import("./views/SettingsView.vue") },
   {
+    path: "/authentication",
+    component: () => import("./views/AuthenticationView.vue"),
+  },
+  {
     path: "/profile-setting",
     component: () => import("./views/ProfileSettingView.vue"),
   },
