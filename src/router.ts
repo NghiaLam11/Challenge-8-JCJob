@@ -7,8 +7,20 @@ const routes = [
   { path: "/jobs", component: () => import("./views/JobsView.vue") },
   { path: "/workers", component: () => import("./views/WorkersView.vue") },
   { path: "/network", component: () => import("./views/NetworkView.vue") },
-  { path: "/notifications", component: () => import("./views/NotificationsView.vue") },
-  { path: "/communities", component: () => import("./views/CommunitiesView.vue") },
+  {
+    path: "/notifications",
+    component: () => import("./views/NotificationsView.vue"),
+  },
+  {
+    path: "/communities",
+    component: () => import("./views/CommunitiesView.vue"),
+  },
+  { path: "/feeds", component: () => import("./views/FeedsView.vue") },
+  { path: "/settings", component: () => import("./views/SettingsView.vue") },
+  {
+    path: "/profile-setting",
+    component: () => import("./views/ProfileSettingView.vue"),
+  },
 ];
 
 const router = createRouter({
