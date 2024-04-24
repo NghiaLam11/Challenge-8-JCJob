@@ -25,6 +25,10 @@ const routes = [
     path: "/profile-setting",
     component: () => import("./views/ProfileSettingView.vue"),
   },
+  {
+    path: "/nearby",
+    component: () => import("./views/NearbyView.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -17,7 +17,7 @@
           <router-link to="/notifications">Notifications</router-link>
         </li>
         <li class="nav-item">
-          <i @click="onOpenSearch" class="fas fa-search"></i>
+          <i @click="onOpenSearch" class="fas fa-search" v-if="$route.path === '/'"></i>
         </li>
       </ul>
       <div class="nav-theme">
@@ -152,7 +152,6 @@ const onOpenSearch = () => {
     isOpenSearch.value = true;
   }
 };
-
 </script>
 
 <style scoped>

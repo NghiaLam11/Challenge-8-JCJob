@@ -17,6 +17,9 @@
         <router-link to="/feeds">Feeds</router-link>
       </li>
       <li>
+        <router-link to="/nearby">Nearby</router-link>
+      </li>
+      <li>
         <router-link to="/communities">Communities</router-link>
       </li>
       <li>
